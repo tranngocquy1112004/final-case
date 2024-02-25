@@ -3,7 +3,7 @@ import { FaBookBookmark } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaUserAlt } from "react-icons/fa";
-import {FaShoppingCart} from "react-icons/fa";
+// import {FaShoppingCart} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Header () {
@@ -35,12 +35,12 @@ export default function Header () {
             <p className="cart">Giỏ hàng</p>
          </Link>
       </div>
-      <div className="d-flex" style={{marginLeft:'80px', marginTop:'25px'}}>
+      {/* <div className="d-flex" style={{marginLeft:'80px', marginTop:'25px'}}>
       <a href="#" className="navbar-brand">
             <FaUserAlt size={30} className=" py-1" style={{marginLeft:'20px',marginBottom:'5px'}} />
             <p className="cart">Tài Khoản</p>
          </a>
-      </div>
+      </div> */}
 
      </div>
     </div>

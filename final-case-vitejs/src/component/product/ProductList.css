@@ -1,0 +1,11 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột bằng nhau */
+    gap: 20px; 
+  }
+/*   
+  .product-item {
+    border: 1px solid #522323; 
+    padding: 20px;
+    margin: 10px; 
+  } */

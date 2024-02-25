@@ -1,7 +1,9 @@
+import ProductList from "../component/product/ProductList";
+import MainLayouts from "../layout/MainLayouts";
 export default function ProductPage () {
     return (
-        <>
-        Product
-        </>
+        <MainLayouts>
+            <ProductList/>
+        </MainLayouts>
     )
 }
