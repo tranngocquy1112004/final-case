@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Header from '../header/Header';
 import './ProductList.css'
 const ProductList = () => {
   const [books, setBooks] = useState([]);
@@ -21,13 +22,12 @@ const ProductList = () => {
     setCart([...cart, product]);
   };
 
-  if (loading) {
-    return <div>Loading...</div>; // Nếu đang loading, hiển thị chữ "Loading..."
-  }
+ 
   // console.log(product)
   return (
     <div>
       <h3 style={{textAlign:'center', marginBottom:'50px'}}>Sản Phẩm Hiện Có</h3>
+      {}
       <div className="product-container">
                 {books?.map(book => (
                 <div key={book.id} className='product-item' >
