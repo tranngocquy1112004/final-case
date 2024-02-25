@@ -2,16 +2,12 @@ import React, {useState, useEffect} from "react";
 import { FaBookBookmark } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
-// import { FaUserAlt } from "react-icons/fa";
-// import {FaShoppingCart} from "react-icons/fa";
-
 import { Link } from "react-router-dom";
 
 export default function Header () {
    const [books, setBooks] = useState([]); // State để lưu trữ danh sách sản phẩm từ API
    const [searchTerm, setSearchTerm] = useState(""); // State để lưu trữ từ khóa tìm kiếm
    useEffect(() => {
-      // Gọi API để lấy danh sách sản phẩm khi component được mount
       fetch("http://localhost:3000/books")
         .then((response) => response.json())
         .then((data) => setBooks(data))
@@ -52,7 +48,17 @@ export default function Header () {
                         />
                         <FaSearch size={15} style={{ marginLeft: '-25px',marginTop:'24px', color: 'rgba(0,0,0,.2)' }} />
                     </form>
-                   
+                    {filteredBooks.map((book) => (
+                    <div key={book.id}>
+                        <img src={book.image} alt={book.title} style={{ width: "200px", height: "200px", marginLeft:"80px"}}/>
+                        <h3 style={{fontSize:"15px",textAlign:'center'}}>{book.title}</h3>
+                      <p>Price: ${book.price}</p>
+                      {/* <div className='d-flex'>
+                <p style={{marginLeft:"90px"}}>Price: ${book.price}
+                </p> */}
+                    </div> 
+
+              ))}
                 </div>
 
       <div className="d-flex" style={{marginLeft:'60px', marginTop:'20px'}}>
@@ -66,9 +72,3 @@ export default function Header () {
     </div>
      )
 }
-// {filteredBooks.map((book) => (
-//    <div key={book.id}>
-//   <h2>{book.title}</h2>
-//   <p>Price: ${book.price}</p>
-//   </div>
-// ))}
