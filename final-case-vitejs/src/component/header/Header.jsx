@@ -1,28 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useContext} from "react";
 import { FaBookBookmark } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
-
+import { SearchContext } from "../../context/search-context";
 export default function Header () {
-   const [books, setBooks] = useState([]); // State để lưu trữ danh sách sản phẩm từ API
-   const [searchTerm, setSearchTerm] = useState(""); // State để lưu trữ từ khóa tìm kiếm
-   useEffect(() => {
-      fetch("http://localhost:3000/books")
-        .then((response) => response.json())
-        .then((data) => setBooks(data))
-        .catch((error) => console.error("Error:", error));
-    }, []);
-    const filteredBooks = books.filter((book) =>
-    book.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-   const handleSearchChange = (e) => {
-     setSearchTerm(e.target.value); // Cập nhật giá trị của từ khóa tìm kiếm
-   };
-   const handleSearch = (e) => {
-      e.preventDefault();
-      console.log("Searching for:", searchTerm);
-   }
+  const {dispatch} = useContext(SearchContext)
      return (
     <div className="head container d-flex">
       <Link to={"/"} className="navbar-brand mt-4">
@@ -31,44 +14,26 @@ export default function Header () {
       </Link>
      <div className="d-flex ">
      <div className="">
-                    <form  onSubmit={handleSearch} className=" d-flex align-items-center" style={{marginLeft:'300px'}}>
+                    <form className=" d-flex align-items-center" style={{marginLeft:'300px'}}>
                         <input
-                           //  type="search"
-                           //  placeholder="Enter product name"
-                           //  className="form-control"
-                           //  style={{paddingRight: '200px', marginTop:'24px' }}
-                           //  value={searchTerm} // Giá trị của ô search được đặt là searchTerm
-                           //  onChange={handleSearchChange} // Lắng nghe sự kiện onChange để cập nhật searchTerm
                            type="text"
                            placeholder="Search for products..."
                            style={{paddingRight: '200px', marginTop:'24px' }}
-                           value={searchTerm}
-                           onChange={handleSearchChange}
-
+                            onInput={(e) => dispatch({
+                              type: 'filters/searchText',
+                              payload: e.target.value
+                            })}
                         />
                         <FaSearch size={15} style={{ marginLeft: '-25px',marginTop:'24px', color: 'rgba(0,0,0,.2)' }} />
                     </form>
-                    {filteredBooks.map((book) => (
-                    <div key={book.id}>
-                        <img src={book.image} alt={book.title} style={{ width: "200px", height: "200px", marginLeft:"80px"}}/>
-                        <h3 style={{fontSize:"15px",textAlign:'center'}}>{book.title}</h3>
-                      <p>Price: ${book.price}</p>
-                      {/* <div className='d-flex'>
-                <p style={{marginLeft:"90px"}}>Price: ${book.price}
-                </p> */}
                     </div> 
-
-              ))}
                 </div>
-
       <div className="d-flex" style={{marginLeft:'60px', marginTop:'20px'}}>
       <Link to={'/cart'} className="navbar-brand">
             <TiShoppingCart size={40} className=" py-1" style={{marginLeft:'10px'}} />
             <p className="cart">Giỏ hàng</p>
          </Link>
       </div>
-
      </div>
-    </div>
      )
 }

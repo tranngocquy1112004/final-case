@@ -1,54 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-// import Header from '../header/Header';
-import './ProductList.css'
+import { SearchContext } from '../../context/search-context';
+import './ProductList.css';
+import Product from "./Product";
+
+
 const ProductList = () => {
-  const [books, setBooks] = useState([]);
-  const [cart, setCart] = useState([]); 
-  const [loading, setLoading] = useState(true)
+  const { state, dispatch } = useContext(SearchContext);
+  const { products, filters: { searchText } } = state;
+
   useEffect(() => {
-    fetch('http://localhost:3000/books')
-      .then(response => response.json())
-      .then(data => {
-        setBooks(data)
-        setLoading(false);
-      })
-      .catch(error => console.error('Error:', error));
-      setLoading(false);
+    async function getProductList() {
+      try {
+        let productRes = await fetch('http://localhost:3000/books');
+        let data = await productRes.json();
+        dispatch({ type: 'FETCH_DATA', payload: data?.book });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    getProductList();
+  }, [dispatch]);
 
-  }, []);
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
+  function queryProducts() {
+    let filteredProducts = [...products];
+    if (searchText) {
+      filteredProducts = filteredProducts.filter((p) => p?.title.toLowerCase().includes(searchText.toLowerCase()));
+    }
+    return filteredProducts;
+  }
 
- 
-  // console.log(product)
+  const filteredProducts = queryProducts();
+
   return (
-    <div>
-      <h3 style={{textAlign:'center', marginBottom:'50px'}}>Sản Phẩm Hiện Có</h3>
-      {}
-      <div className="product-container">
-               {/* {filteredBooks.map((book) => (
-                    <div key={book.id}>
-                        <h2>{book.title}</h2>
-                      <p>Price: ${book.price}</p>
-                    </div> 
-
-              ))} */}
-                {/* {books?.map(book => (
-                <div key={book.id} className='product-item' >
-            <img src={book.image} alt={book.title} style={{ width: "200px", height: "200px", marginLeft:"80px"}}/>
-            <h3 style={{fontSize:"15px",textAlign:'center'}}>{book.title}</h3>
-            <div className='d-flex'>
-                <p style={{marginLeft:"90px"}}>Price: ${book.price}
-                </p>  */}
-                {/* <span role='button' style={{marginLeft:'30px'}}  onClick={() => addToCart(book)}><FaShoppingCart/></span> */}
-                </div>
-            </div>
-        // ))}
-            // </div>
-      //  </div>
+    <div className="py-2 d-flex flex-column justify-content-center">
+    <h5>Products</h5>
+    <div className="row">
+        {
+            filteredProducts?.map((book) => (
+                <Product key={book.id} product={book} />
+            ))
+        }
+    </div>
+</div>
   );
 };
+
 export default ProductList;
