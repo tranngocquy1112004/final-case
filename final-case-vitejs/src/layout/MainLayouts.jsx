@@ -5,11 +5,11 @@ export default function MainLayouts ({children}) {
          <>
     <div className="container">
         <Header/>
-        <div className="d-flex">
-            <main className="flex-grow-1"> 
+        {/* <div className="d-flex">
+            <main className="flex-grow-1">  */}
                 {children}
-            </main>
-        </div>
+            {/* </main>
+        </div> */}
         <Footer/> 
    </div>
     </> 
