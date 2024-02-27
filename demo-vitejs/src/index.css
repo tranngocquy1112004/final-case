@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+.active{
+    background-color: rgb(72, 72, 255) !important ;
+    color: white !important;
+    border-radius: 4px;
+}
+.avatar-sm{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+.avatar-lg{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.border-dashed{
+    border-bottom: 1px dashed lightgray;
+}

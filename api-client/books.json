@@ -1,0 +1,17 @@
+{
+    "books": [
+      { "id": 1, "title": "Sống Mòn", "category": "Tiểu Thuyết", "price": 10.99, "image":"https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/songmon01.jpg?v=1696493716203" },
+      { "id": 2, "title": "Số Đỏ", "category": "Tiểu Thuyết", "price": 12.99,"image":"https://book.sachgiai.com/uploads/book/tieu-thuyet-so-do/tieu-thuyet-so-do-vu-trong-phung.jpg" },
+      { "id": 3, "title": "Dế Mèn Phiêu Lưu Kí", "author": "Tiểu Thuyết", "price": 12.99,"image":"https://static.8cache.com/cover/o/eJzLyTDW1_VIzDROLfM3Noh31A8LM8zQLQlx8Uj11HeEgrw8V_0o5-Ck1IDyQEf3bP1iAwDLihCU/de-men-phieu-luu-ky.jpg"},
+      { "id": 4, "title": "Trịnh Công Sơn - Thư Tình Gửi Một Người", "category": "Tiểu Sử-Hồi Ký", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8934974175230.jpg"},
+      { "id": 5, "title": "Nikola Tesla Tự Truyện", "category": "Tiểu Sử-Hồi Ký", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/9/7/9786043941388_1.jpg"},
+      { "id": 6, "title": "Beethoven - Nhà Soạn Nhạc Cổ Điển Vĩ Đại Thế Giới", "category": "Tiểu Sử-Hồi Ký", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8935210296122.jpg"},
+      { "id": 7, "title": "Eo Thon Nhỏ", "category": "Ngôn Tình", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8935212359276.jpg"},
+      { "id": 8, "title": "Mãi Mãi Là Bao Xa ", "category": "Ngôn Tình", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8935212358231.jpg"},
+      { "id": 9, "title": "Năm Tháng Tĩnh Lặng, Kiếp Này Bình Yên", "category": "Ngôn Tình", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/b/i/bia-1_nam-thang-tinh-lang_tb2021.jpg"},
+      { "id": 10, "title": "Hồ Tuyệt Mệnh", "category": "Kinh Dị", "price": 10.99, "image":"https://bloganchoi.com/wp-content/uploads/2019/09/sach-ho-tuyet-menh.jpg"},
+      { "id": 11, "title": "Tết Ở Làng Địa Ngục", "category": "Kinh Dị", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8935212358279.jpg"},
+      { "id": 12, "title": "Ba Hồi Kinh Dị", "category": "Kinh Dị", "price": 10.99, "image":"https://dnamedical.vn/wp-content/uploads/2023/10/truyen-kinh-di-viet-nam-ba-hoi-kinh-di-pdf-2.jpg"}
+
+    ]
+  }

@@ -1,7 +1,5 @@
 import React from "react";
 import { FaCartArrowDown, } from "react-icons/fa";
-import ProductList from "./ProductList";
-
 function Product({ book  }) {
     return (
         <div className="col-md-3 mb-4">
