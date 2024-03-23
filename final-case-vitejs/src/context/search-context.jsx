@@ -10,5 +10,4 @@ export const SearchContext = createContext();
     </SearchContext.Provider>
   );
 };
-
 export default SearchProvider;

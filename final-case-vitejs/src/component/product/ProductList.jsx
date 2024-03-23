@@ -3,7 +3,7 @@ import { SearchContext } from '../../context/search-context';
 import { fetchData } from "../../reducer/actions";
 import Product from "./Product";
 
-const ProductList = () => {
+const ProductList = (book) => {
   const { state, dispatch } = useContext(SearchContext);
   const { products, filters: { searchText } } = state;
 
@@ -19,7 +19,17 @@ const ProductList = () => {
     }
     getProductList();
   }, []);
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/books')
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setBooks(data)
+  //       setLoading(false);
+  //     })
+  //     .catch(error => console.error('Error:', error));
+  //     setLoading(false);
 
+  // }, []);
   function queryProducts() {
     if (searchText) {
       return products.filter((product) => product?.title.toLowerCase().includes(searchText.toLowerCase()));
@@ -34,8 +44,8 @@ const ProductList = () => {
     <div className="py-2 d-flex flex-column justify-content-center">
       <h5>Sản Phẩm Hiện Có:</h5>
       <div className="row">
-        {filteredProducts?.map((book) => (
-          <Product key={book.id} product={book} />
+        {filteredProducts?.map((product) => (
+          <Product key={product.id} product={product} />
         ))}
       </div>
     </div>

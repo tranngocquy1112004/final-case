@@ -1,0 +1,3 @@
+const BRICK_WIDTH = 50;
+const BRICK_HEIGHT = 40;
+const SPACE_BIRCK = 10; 
