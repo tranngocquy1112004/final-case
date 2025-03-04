@@ -10,7 +10,7 @@ const ProductList = (book) => {
   useEffect(() => {
     async function getProductList() {
       try {
-        let productRes = await fetch('http://localhost:3000/books');
+        let productRes = await fetch('http://localhost:3050/books');
         let data = await productRes.json();
         dispatch(fetchData(data))
       } catch (error) {
@@ -19,17 +19,6 @@ const ProductList = (book) => {
     }
     getProductList();
   }, []);
-  // useEffect(() => {
-  //   fetch('http://localhost:3000/books')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       setBooks(data)
-  //       setLoading(false);
-  //     })
-  //     .catch(error => console.error('Error:', error));
-  //     setLoading(false);
-
-  // }, []);
   function queryProducts() {
     if (searchText) {
       return products.filter((product) => product?.title.toLowerCase().includes(searchText.toLowerCase()));

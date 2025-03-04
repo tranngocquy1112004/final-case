@@ -1,0 +1,12 @@
+.head1 {
+    display: flex;
+    justify-content: center;
+
+}
+.head2 {
+    width: 500px;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 260px;
+}

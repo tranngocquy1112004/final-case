@@ -1,7 +1,7 @@
 {
     "books": [
       { "id": 1, "title": "Sống Mòn", "category": "Tiểu Thuyết", "price": 10.99, "image":"https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/songmon01.jpg?v=1696493716203" },
-      { "id": 2, "title": "Số Đỏ", "category": "Tiểu Thuyết", "price": 12.99,"image":"https://book.sachgiai.com/uploads/book/tieu-thuyet-so-do/tieu-thuyet-so-do-vu-trong-phung.jpg" },
+      { "id": 2, "title": "Số Đỏ", "category": "Tiểu Thuyết", "price": 12.99,"image":"https://product.hstatic.net/1000237375/product/thiet_ke_chua_co_ten_-_2024-08-30t094519.197_549f30009de045a79ace8f6f151401e7.png" },
       { "id": 3, "title": "Dế Mèn Phiêu Lưu Kí", "author": "Tiểu Thuyết", "price": 12.99,"image":"https://static.8cache.com/cover/o/eJzLyTDW1_VIzDROLfM3Noh31A8LM8zQLQlx8Uj11HeEgrw8V_0o5-Ck1IDyQEf3bP1iAwDLihCU/de-men-phieu-luu-ky.jpg"},
       { "id": 4, "title": "Trịnh Công Sơn - Thư Tình Gửi Một Người", "category": "Tiểu Sử-Hồi Ký", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/8/9/8934974175230.jpg"},
       { "id": 5, "title": "Nikola Tesla Tự Truyện", "category": "Tiểu Sử-Hồi Ký", "price": 10.99, "image":"https://cdn0.fahasa.com/media/catalog/product/9/7/9786043941388_1.jpg"},
