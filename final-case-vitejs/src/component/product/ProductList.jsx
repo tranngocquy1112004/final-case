@@ -10,7 +10,7 @@ const ProductList = (book) => {
   useEffect(() => {
     async function getProductList() {
       try {
-        let productRes = await fetch('http://localhost:3050/books');
+        let productRes = await fetch('http://localhost:3000/books');
         let data = await productRes.json();
         dispatch(fetchData(data))
       } catch (error) {

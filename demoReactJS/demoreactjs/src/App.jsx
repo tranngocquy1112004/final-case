@@ -1,17 +1,17 @@
-import Pagination from "./Pagination";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// Thu vien cua ReactJS
+import ProductList from "./ProductList";
 
-const data = [
-  "Sản phẩm 1", "Sản phẩm 2", "Sản phẩm 3", "Sản phẩm 4", "Sản phẩm 5",
-  "Sản phẩm 6", "Sản phẩm 7", "Sản phẩm 8", "Sản phẩm 9", "Sản phẩm 10",
-  "Sản phẩm 11", "Sản phẩm 12"
-];
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <Pagination items={data} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/page/:pageNumber" element={<ProductList />} />
+        <Route path="*" element={<ProductList />} /> {/* Mặc định trang đầu tiên */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
