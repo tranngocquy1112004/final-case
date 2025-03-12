@@ -1,0 +1,115 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Căn trái - phải */
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+  }
+.store-title {
+    font-size: 30px;
+    font-weight: bold;
+    animation: colorChange 0.5s infinite;
+    text-decoration: none;
+}
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+  }
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .login-link {
+    font-size: 18px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sản phẩm mỗi dòng */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Giới hạn chiều cao ảnh */
+    /* object-fit: cover; */
+  }
+  
+  .product-name {
+    color: #000000;
+    color: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-decoration: none !important;
+
+  }
+  
+  .product-price {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration: none !important;
+
+  }
+  
+  .product-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .product-button:hover {
+    background-color: #0056b3;
+  }
+  .pagination {
+    text-align: center;
+  }
+  

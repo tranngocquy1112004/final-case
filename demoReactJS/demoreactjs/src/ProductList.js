@@ -14,7 +14,7 @@ const ProductList = () => {
   // - parseInt: Chuyển đổi pageNumber thành số nguyên
   // Tính toán dữ liệu hiển thị
   const startIndex = (currentPage - 1) * itemsPerPage;
-  // Vì mảng trong JavaScript bắt đầu từ chỉ mục 0, nên cần giảm currentPage đi 1 và
+  // Vì mảng trong JavaScript bắt đầu từ chỉ mục 0, nên cần giảm currentPage đi 1 và 
   //  nhân với itemsPerPage: Giúp xác định vị trí bắt đầu của sản phẩm trên trang hiện tại.
   const currentItems = items.slice(startIndex, startIndex + itemsPerPage);
   // slice: Cắt sản phẩm mỗi trang ra thành 5 phần tử / trang
