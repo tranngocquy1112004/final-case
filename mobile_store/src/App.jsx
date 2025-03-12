@@ -6,8 +6,6 @@ import ProductDetail from "./components/ProductDetail";
 import Account from "./account/Account";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./pages/CartContext";
-// import { CartContext } from "./pages/CartContext";
-// export const CartContext = createContext();
   const App = () => {
   return (
 
@@ -15,8 +13,8 @@ import { CartProvider } from "./pages/CartContext";
     <Router>
       <Routes>
         <Route path="/" element={<Account />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<ProductPage />} />
+        {/* <Route path="/home" element={<Home />} /> */}
+        <Route path="/home" element={<ProductPage />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<CartPage/>} />
       </Routes>
