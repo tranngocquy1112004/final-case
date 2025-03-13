@@ -2,6 +2,84 @@
     "products": [
       {
         "id": 1,
+        "name": "iPhone 16 Pro Max",
+        "image": "https://cdn.tgdd.vn/Products/Images/42/329149/iphone-16-pro-max-sa-mac-thumb-1-600x600.jpg",
+        "price": 35000000,
+        "description": "Điện thoại flagship cao cấp nhất của Apple năm 2024",
+        "screen": "6.9 inch OLED 120Hz ProMotion",
+        "chip": "Apple A18 Bionic",
+        "ram": "8GB",
+        "storage": "256GB, 512GB, 1TB, 2TB",
+        "camera": "48MP + 12MP + 12MP + 12MP (ToF)",
+        "battery": "5000 mAh"
+      },
+      {
+        "id": 2,
+        "name": "iPhone 16 Pro",
+        "image": "https://cdn.tgdd.vn/Products/Images/42/329143/iphone-16-pro-tu-nhien-thumb-600x600.jpg", 
+        "price": 32000000,
+        "description": "Phiên bản Pro với thiết kế tiên tiến và hiệu năng mạnh mẽ",
+        "screen": "6.3 inch OLED 120Hz ProMotion",
+        "chip": "Apple A18 Pro",
+        "ram": "8GB",
+        "storage": "256GB, 512GB, 1TB",
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "4700 mAh"
+      },
+      {
+        "id": 3,
+        "name": "iPhone 16",
+        "image": "https://cdn.viettelstore.vn/Images/Product/ProductImage/1358310440.jpeg",
+        "price": 28000000,
+        "description": "Phiên bản tiêu chuẩn với hiệu năng mạnh mẽ",
+        "screen": "6.1 inch OLED 120Hz",
+        "chip": "Apple A18",
+        "ram": "6GB",
+        "storage": "128GB, 256GB, 512GB",
+        "camera": "48MP + 12MP",
+        "battery": "4500 mAh"
+      },
+      {
+        "id": 4,
+        "name": "iPhone 15 Pro Max",
+        "image": "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg",
+        "price": 32000000,
+        "description": "Mẫu Pro Max với thiết kế titanium và camera cải tiến",
+        "screen": "6.7 inch OLED 120Hz",
+        "chip": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": "256GB, 512GB, 1TB",
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "4850 mAh"
+      },
+      {
+        "id": 5,
+        "name": "iPhone 15 Pro",
+        "image": "https://cdn.tgdd.vn/Products/Images/42/299033/iphone-15-pro-gold-thumbnew-600x600.jpg", 
+        "price": 29000000,
+        "description": "Phiên bản Pro đầu tiên với titanium và A17 Pro",
+        "screen": "6.1 inch OLED 120Hz",
+        "chip": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": "128GB, 256GB, 512GB, 1TB",
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "4400 mAh"
+      },
+      {
+        "id": 6,
+        "name": "iPhone 15",
+        "image": "https://cdn.tgdd.vn/Products/Images/42/281570/iphone-15-hong-thumb-1-600x600.jpg",
+        "price": 25000000,
+        "description": "Phiên bản tiêu chuẩn với USB-C và Dynamic Island",
+        "screen": "6.1 inch OLED 60Hz",
+        "chip": "Apple A16",
+        "ram": "6GB",
+        "storage": "128GB, 256GB, 512GB",
+        "camera": "48MP + 12MP",
+        "battery": "4352 mAh"
+      },
+      {
+        "id": 7,
         "name": "iPhone 14 Pro Max",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/t/_/t_m_18_1_3_2_1.png",
         "price": 30000000,
@@ -14,7 +92,7 @@
         "battery": "4323 mAh"
       },
       {
-        "id": 2,
+        "id": 8,
         "name": "iPhone 14 Pro",
         "image": "https://www.didongmy.com/vnt_upload/product/09_2022/thumbs/(600x600)_14pro_vang_600x600_didongmy.png",
         "price": 26990000,
@@ -27,7 +105,7 @@
         "battery": "3200 mAh"
       },
       {
-        "id": 3,
+        "id": 9,
         "name": "iPhone 14",
         "image": "https://cdn.tgdd.vn/Products/Images/42/240259/iPhone-14-plus-thumb-xanh-600x600.jpg",
         "price": 20990000,
@@ -40,7 +118,7 @@
         "battery": "3279 mAh"
       },
       {
-        "id": 4,
+        "id": 10,
         "name": "iPhone 13 ProMax",
         "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-13-pro-max.png",
         "price": 23990000,
@@ -53,7 +131,7 @@
         "battery": "4352 mAh"
       },
       {
-        "id": 5,
+        "id": 11,
         "name": "iPhone 13 Pro",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/1/_/1_66_6_2_4.jpg",
         "price": 20990000,
@@ -66,7 +144,7 @@
         "battery": "3095 mAh"
       },
       {
-        "id": 6,
+        "id": 12,
         "name": "iPhone 13",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-13_2_.png",
         "price": 17990000,
@@ -79,7 +157,7 @@
         "battery": "3240 mAh"
       },
       {
-        "id": 7,
+        "id": 13,
         "name": "iPhone 12 ProMax",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/d/o/download_1__2_25.png",
         "price": 20990000,
@@ -92,7 +170,7 @@
         "battery": "3687 mAh"
       },
       {
-        "id": 8,
+        "id": 14,
         "name": "iPhone 12 Pro",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/d/o/download_4_2_2.png",
         "price": 18990000,
@@ -105,7 +183,7 @@
         "battery": "2815 mAh"
       },
       {
-        "id": 9,
+        "id": 15,
         "name": "iPhone 12",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-12-mini-mau-tim-3-600x600_31.jpg",
         "price": 14990000,
@@ -118,7 +196,7 @@
         "battery": "2815 mAh"
       },
       {
-        "id": 10,
+        "id": 16,
         "name": "iPhone 11 ProMax",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-11-pro-max-midnight-green-select-2019_1_3.png",
         "price": 15990000,
@@ -131,7 +209,7 @@
         "battery": "3969 mAh"
       },
       {
-        "id": 11,
+        "id": 17,
         "name": "iPhone 11 Pro",
         "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/i/p/iphone-11-pro-gold-select-2019_8_2_1.png",
         "price": 13990000,
@@ -144,7 +222,7 @@
         "battery": "3046 mAh"
       },
       {
-        "id": 12,
+        "id": 18,
         "name": "iPhone 11 ",
         "image": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-11.png",
         "price": 10990000,

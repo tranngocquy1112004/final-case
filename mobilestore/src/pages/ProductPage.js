@@ -25,6 +25,7 @@ const ProductPage = () => {
         console.error("Error fetching products:", error);
       }
     };
+    
 
     const loadUser = () => {
       const savedUser = JSON.parse(localStorage.getItem("currentUser"));
