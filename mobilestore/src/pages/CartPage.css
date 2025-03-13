@@ -135,20 +135,23 @@
   
   /* 🔙 Nút quay lại */
   .back-button {
-    background: #ffd1dc; /* Hồng phấn nhạt */
-    color: #ff6f91;
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 20px; /* Bo góc tròn hơn */
+    display: inline-block; /* Để áp dụng căn giữa */
+    background-color: #87ceeb; /* Màu xanh nhạt */
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s ease;
+    border-radius: 5px;
+    margin-top: 20px; /* Khoảng cách từ nội dung phía trên */
+  }
+  
+  /* Căn giữa nút "Quay lại" */
+  .back-button-container {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    margin-top: 20px; /* Khoảng cách từ nội dung phía trên */
   }
   
   .back-button:hover {
     background: #ff99ac; /* Đậm hơn khi hover */
     text-decoration: none;
   }
+ 
