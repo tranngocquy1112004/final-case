@@ -10,8 +10,11 @@ const API_URL = "http://localhost:4000/products";
 const ProductPage = () => {
   const { addToCart } = useContext(CartContext);
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState("all"); // Thêm trạng thái cho thương hiệu
   const navigate = useNavigate();
 
   // Fetch products and user on mount
@@ -21,11 +24,11 @@ const ProductPage = () => {
         const response = await fetch(API_URL);
         const data = await response.json();
         setProducts(data);
+        setFilteredProducts(data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     };
-    
 
     const loadUser = () => {
       const savedUser = JSON.parse(localStorage.getItem("currentUser"));
@@ -38,6 +41,24 @@ const ProductPage = () => {
     loadUser();
   }, []);
 
+  // Handle search and brand filter
+  useEffect(() => {
+    let filtered = products;
+
+    // Lọc theo thương hiệu
+    if (selectedBrand !== "all") {
+      filtered = filtered.filter((product) => product.brand === selectedBrand);
+    }
+
+    // Lọc theo từ khóa tìm kiếm
+    filtered = filtered.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredProducts(filtered);
+    setCurrentPage(1); // Reset về trang 1 khi lọc
+  }, [searchTerm, selectedBrand, products]);
+
   // Handle logout
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
@@ -46,10 +67,10 @@ const ProductPage = () => {
   };
 
   // Pagination logic
-  const totalPages = Math.ceil(products.length / PRODUCTS_PER_PAGE);
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
   const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
   const indexOfFirstProduct = indexOfLastProduct - PRODUCTS_PER_PAGE;
-  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const goToNextPage = () => {
     if (currentPage < totalPages) {
@@ -74,7 +95,7 @@ const ProductPage = () => {
 
       <header className="header">
         <Link to="/home" className="store-title">
-        📱MobileStore
+          📱MobileStore
         </Link>
 
         <div className="header-actions">
@@ -97,7 +118,50 @@ const ProductPage = () => {
       </header>
 
       <section className="product-section">
-        <h2 className="product-title"> Danh sách sản phẩm</h2>
+        <div className="product-header">
+          <h2 className="product-title">Danh sách sản phẩm</h2>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Tìm kiếm sản phẩm..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="search-input"
+            />
+          </div>
+        </div>
+
+        {/* Thêm các nút lọc thương hiệu */}
+        <div className="brand-filter">
+          <button
+            className={`brand-button ${selectedBrand === "all" ? "active" : ""}`}
+            onClick={() => setSelectedBrand("all")}
+          >
+            Tất cả
+          </button>
+          <button
+            className={`brand-button ${selectedBrand === "Apple" ? "active" : ""}`}
+            onClick={() => setSelectedBrand("Apple")}
+          >
+            Apple
+          </button>
+          <button
+            className={`brand-button ${selectedBrand === "Samsung" ? "active" : ""}`}
+            onClick={() => setSelectedBrand("Samsung")}
+          >
+            Samsung
+          </button>
+          <button
+            className={`brand-button ${selectedBrand === "Xiaomi" ? "active" : ""}`}
+            onClick={() => setSelectedBrand("Xiaomi")}
+          >
+            Xiaomi
+          </button>
+        </div>
+
+        {filteredProducts.length === 0 && (
+          <p className="no-results">Không tìm thấy sản phẩm nào.</p>
+        )}
         <div className="product-grid">
           {currentProducts.map((product) => (
             <div key={product.id} className="product-card">
